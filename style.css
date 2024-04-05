@@ -1,0 +1,419 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    
+}
+body{
+    overflow-x: hidden;
+    background: #0f0f0f;
+    
+    
+}
+.center{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+.none{
+    display: none;
+}
+.ring{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: ring 2s linear infinite; 
+}
+@keyframes ring{
+    0%{
+        transform: rotate(0deg);
+        box-shadow: 1px 5px 2px #e65c00;
+    }
+    50%{
+        transform: rotate(180deg);
+        box-shadow: 1px 5px 2px #18b201;
+    }
+    100%{
+        transform: rotate(360deg);
+        box-shadow: 1px 5px 2px #0456c8;
+    }
+}
+.ring::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255,255,255,.3);
+
+}
+.center p{
+    color: #49494981;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 200px;
+}
+.main-width{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.hero{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),url(image/IMG_20220708_232113.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: none;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    
+    
+}
+.non{
+    display: flex;
+}
+header{
+    padding: 40px 0 30px ;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.logo img{
+    height: 120px;
+    width: 120px;
+    color: white;
+    background-color: transparent;
+    
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+nav .hamb{
+    width: 35px;
+    height: 24px;
+    right: 3%;
+    top: 40px;
+    z-index: 5; 
+    cursor: pointer;
+    display: none;
+}
+nav .hamb i{
+    font-size: 40px;
+    color: white;
+}
+
+nav .nav-list{
+    list-style: none;
+}
+nav .nav-list li{
+    display: inline-block;
+}
+nav .nav-list li a{
+    display: inline-block;
+    color: #eee;
+    margin-left: 55px;
+    font-size: 15px;
+    font-weight: 600;
+
+}
+nav .nav-list li a:hover{
+    color: #2ecc71;
+    transition: .4s;
+}
+
+nav .nav-list li.btn a{
+    display: inline-block;
+    background: transparent;
+    border: 2px solid #2ecc71;
+    padding: 9px 28px;
+    border-radius: 30px;
+    line-height: 1.3;
+    color: #2ecc71;
+    font-weight: 500;
+}
+nav .nav-list li.btn:hover a{
+    background: #2ecc71;
+    color: white;
+    border: 2px solid transparent;
+    transition: .4s;
+}
+.container{
+    padding-top: 100px;
+}
+.container .hero-text{
+    margin-bottom: 40px;
+}
+.container .hero-text h1{
+    color: white;
+    font-size: 47px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 20px 0px 20px;
+}
+span{
+    color: #2ecc71;
+}
+.container .hero-text h3{
+    color: #eee;
+    font-weight: 400;
+    font-size: 17px;
+}
+.container .hero-text p{
+    width: 400px;
+    max-width: 100%;
+    color: #eee;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.social a{
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+    color: #eee;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-bottom: 35px;
+}
+.social a:hover{
+    transform: scale(1.1);
+    background: #2ecc71;
+    transition: .4s;
+}
+.container .hero-text button{
+    color: #eee;
+    background: #2ecc71;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 8px 30px;
+    border: 2px solid #2ecc71;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.container .hero-text button:hover{
+    background: transparent;
+    transition: .4s;
+}
+.bottom{
+    margin-top: 243px;
+    padding-bottom: 40px;
+}
+.bottom p{
+    color: #eee;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+@media screen and (max-width: 930px){
+    nav .hamb{
+        display: initial;
+    }
+    .click{
+        top: 46px;
+    }
+    .click span{
+        position: absolute;
+        
+    
+    }
+    
+    nav .nav-list{
+        position: absolute;
+        top: 90px;
+        display:none;
+        bottom: 0;
+        width: 60%;
+        height: 65%;
+        background: black;
+        z-index: 2;
+        padding: 6% 9%;
+        transition: .3s right;
+        border-radius: 10px;
+    }
+    nav .nav-list li{
+        display: block;
+
+    }
+    nav .nav-list li a{
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        margin-left: 0;
+        margin-bottom: 40px;
+    }
+    nav .nav-list li.btn a{
+        position: absolute;
+        bottom: 2%;
+        right: 20%;
+        left: 20%;
+        padding: 7px 15px ;
+        font-size: 14px;
+    }
+    nav .nav-list.open{
+        display: block;
+        right: 0;
+
+    }
+}    
+
+
+
+
+
+
+
+.service{
+    padding-bottom: 100px;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 45px;
+    margin: auto;
+
+}
+.max-width h1{
+    text-align: center;
+    position: relative;
+    font-size: 50px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+.max-width h1:after{
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    padding: 50px 25px;
+    width: calc(26%-20px);
+    border-radius: 6px;
+    background: #222;
+    text-align: center;
+    transition: 0.4s ;
+   
+    user-select: none;
+}
+.card:hover{
+    background: #2ecc71;
+    box-shadow: 0px 4px 80px -12px #2ecc71; 
+}
+.box{
+    transform: all 0.3s ease;
+}
+.box i{
+    font-size: 40px;
+    color: #2ecc71;
+}
+.box  h3{
+    color: #fff;
+    font-size: 25px;
+    padding: 10px 0 7px;
+}
+.card:hover i{
+    color: #fff;
+}
+
+@media screen and (max-width: 930px){
+    
+    .card{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
+
+
+.contact-me h1{
+    text-align: center;
+    position: relative;
+    font-size: 50px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+
+}
+.contact-me h1:after{
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.contact-form{
+    max-width: 600px;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
+.contact-form-text{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    background: rgb(37, 37, 37);
+    padding: 20px 40px;
+    outline: none;
+    color:#fff;
+}
+.contact-form-text:focus{
+    box-shadow: 0 0 10px 4px #34495e;
+}
+textarea.contact-form-text{
+    resize: none;
+    height: 140px;
+}
+.contact-form-btn{
+    float: right;
+    border: 0;
+    background: #34495e;
+    color: #eee;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .4s;
+}
+.contact-form-btn:hover{
+
+    background: #2ecc71;
+}
+
+.bottom p{
+    text-align: center;
+}
